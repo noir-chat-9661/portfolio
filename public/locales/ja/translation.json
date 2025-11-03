@@ -1,0 +1,43 @@
+{
+	"header": {
+		"title": "ポートフォリオ",
+		"home": "ホーム",
+		"about": "自己紹介",
+		"link": "リンク集"
+	},
+	"theme": {
+		"light": "ライト",
+		"dark": "ダーク",
+		"system": "システム"
+	},
+	"home": {
+		"title": "🐈‍⬛の住処へようこそ",
+		"products": "作品一覧"
+	},
+	"notFound": {
+		"title": "ページが見つかりません",
+		"description": "お探しのページですか？そこになければないですね...",
+		"back": "ホームに戻る"
+	},
+	"links": {
+		"title": "リンク集"
+	},
+	"about": {
+		"title": "自己紹介",
+		"attribute": {
+			"name": "名前",
+			"age": "年齢",
+			"location": "所在地",
+			"occupation": "職業",
+			"technologies": "使用技術",
+			"specialities": "得意分野"
+		},
+		"value": {
+			"name": "凶兆の黒猫",
+			"location": "福島県",
+			"occupation": "学生",
+			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, Cなど",
+			"specialities": "バックエンド開発・Discord Bot開発"
+		}
+	}
+}
