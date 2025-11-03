@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
 	compiler: {
 		styledComponents: true,
 	},
-	images: {
-		unoptimized: true,
-	},
 	allowedDevOrigins: ["http://172.26.64.1:3000"],
 };
 
