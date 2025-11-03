@@ -1,0 +1,43 @@
+{
+	"header": {
+		"title": "Portfolio",
+		"home": "Home",
+		"about": "About",
+		"link": "Links"
+	},
+	"theme": {
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"home": {
+		"title": "Welcome to My Page",
+		"products": "Products"
+	},
+	"notFound": {
+		"title": "Page Not Found",
+		"description": "The page you are looking for does not exist.",
+		"back": "Go Back Home"
+	},
+	"links": {
+		"title": "Links Page"
+	},
+	"about": {
+		"title": "About Me",
+		"attribute": {
+			"name": "Name",
+			"age": "Age",
+			"location": "Location",
+			"occupation": "Occupation",
+			"technologies": "Technologies",
+			"specialities": "Specialities"
+		},
+		"value": {
+			"name": "Noir C(h)at",
+			"location": "Fukushima, Japan",
+			"occupation": "Student",
+			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, C, etc.",
+			"specialities": "Backend Development, Discord Bot Development"
+		}
+	}
+}
