@@ -23,7 +23,7 @@ export function Header() {
 		>
 			<div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
 				<Image
-					src="/icon.webp"
+					src="/picts/icon.webp"
 					alt="Icon"
 					width={36}
 					height={36}

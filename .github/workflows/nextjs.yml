@@ -33,6 +33,7 @@ jobs:
       - name: Build with Next.js
         run: yarn build
         env:
+          GITHUB_PAGES: true
           NODE_OPTIONS: '--max-old-space-size=4096'
       
       - name: Upload artifact
