@@ -44,7 +44,7 @@ export default function Home() {
 						{isMounted ? t("home.title") : <>&nbsp;</>}
 					</h1>
 					<Image
-						src="/icon.webp"
+						src="/picts/icon.webp"
 						alt="Icon"
 						width={128}
 						height={128}
