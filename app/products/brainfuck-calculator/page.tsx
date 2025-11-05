@@ -74,7 +74,7 @@ export default function BrainfuckCalculatorPage() {
 	const examples = ["1+1=", "12+34=", "100-50=", "15*3=", "144/12="];
 
 	return (
-		<div className="min-h-[calc(100vh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900 p-6">
+		<div className="min-h-[calc(100dvh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900 p-6">
 			<div className="max-w-4xl mx-auto space-y-6">
 				<div>
 					<h1 className="text-3xl font-bold">

@@ -57,55 +57,59 @@ export default function TRPGDiceRollerPage() {
 	};
 
 	return (
-		<div className="container mx-auto p-4">
-			<Card className="max-w-3xl mx-auto">
-				<CardHeader>
-					<CardTitle>
-						{isMounted ? t("products.trpgDiceRoller.title") : <>&nbsp;</>}
-					</CardTitle>
-				</CardHeader>
-				<CardContent>
-					<div className="mb-4">
-						<label className="block mb-2 font-semibold">
-							{isMounted ? t("products.trpgDiceRoller.inputLabel") : <>&nbsp;</>}
-						</label>
-						<Input
-							type="text"
-							value={input}
-							onChange={(e) => setInput(e.target.value)}
-							placeholder={isMounted ? t("products.trpgDiceRoller.inputPlaceholder") || "" : ""}
-						/>
-					</div>
-					<div className="mb-4">
-						<Button onClick={run} disabled={running || !code || !input}>
-							<Dices className="mr-1 h-5 w-5" />
-							{running ? (
-								isMounted ? t("products.trpgDiceRoller.running") : <>&nbsp;</>
-							) : (
-								isMounted ? t("products.trpgDiceRoller.runButton") : <>&nbsp;</>
-							)}
-						</Button>
-					</div>
-					{error && (
-						<div className="mb-4 p-4 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-md border border-red-200 dark:border-red-800">
-							<p className="font-semibold">
-								{isMounted ? t("products.trpgDiceRoller.errorLabel") : <>&nbsp;</>}
-							</p>
-							<p className="text-sm mt-1">{error}</p>
-						</div>
-					)}
-					{result && (
-						<div className="mb-4">
-							<label className="block mb-2 font-semibold">
-								{isMounted ? t("products.trpgDiceRoller.resultLabel") : <>&nbsp;</>}
-							</label>
-							<div className="p-4 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-md border border-green-200 dark:border-green-800 font-mono">
-								{result}
+		<div className="min-h-[calc(100dvh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900 p-6">
+			<div className="max-w-4xl mx-auto space-y-6">
+				<div className="container mx-auto p-4">
+					<Card className="max-w-3xl mx-auto dark:bg-gray-900/50">
+						<CardHeader>
+							<CardTitle>
+								{isMounted ? t("products.trpgDiceRoller.title") : <>&nbsp;</>}
+							</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<div className="mb-4">
+								<label className="block mb-2 font-semibold">
+									{isMounted ? t("products.trpgDiceRoller.inputLabel") : <>&nbsp;</>}
+								</label>
+								<Input
+									type="text"
+									value={input}
+									onChange={(e) => setInput(e.target.value)}
+									placeholder={isMounted ? t("products.trpgDiceRoller.inputPlaceholder") || "" : ""}
+								/>
 							</div>
-						</div>
-					)}
-				</CardContent>
-			</Card>
+							<div className="mb-4">
+								<Button onClick={run} disabled={running || !code || !input}>
+									<Dices className="mr-1 h-5 w-5" />
+									{running ? (
+										isMounted ? t("products.trpgDiceRoller.running") : <>&nbsp;</>
+									) : (
+										isMounted ? t("products.trpgDiceRoller.runButton") : <>&nbsp;</>
+									)}
+								</Button>
+							</div>
+							{error && (
+								<div className="mb-4 p-4 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-md border border-red-200 dark:border-red-800">
+									<p className="font-semibold">
+										{isMounted ? t("products.trpgDiceRoller.errorLabel") : <>&nbsp;</>}
+									</p>
+									<p className="text-sm mt-1">{error}</p>
+								</div>
+							)}
+							{result && (
+								<div className="mb-4">
+									<label className="block mb-2 font-semibold">
+										{isMounted ? t("products.trpgDiceRoller.resultLabel") : <>&nbsp;</>}
+									</label>
+									<div className="p-4 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-md border border-green-200 dark:border-green-800 font-mono">
+										{result}
+									</div>
+								</div>
+							)}
+						</CardContent>
+					</Card>
+				</div>
+			</div>
 		</div>
 	);
 }

@@ -37,7 +37,7 @@ export function Header() {
 						alt="Icon"
 						width={36}
 						height={36}
-						className="rounded-full w-10 h-10 mr-3"
+						className="rounded-full w-10 h-10 mr-3 pointer-events-none select-none"
 					/>
 				</NextLink>
 				<div className={cn("text-xl font-bold", isProductsPage ? "sm:block hidden" : "lg:block hidden")}>
@@ -48,7 +48,7 @@ export function Header() {
 				</div>
 			</div>
 			{isProductsPage ? (
-				<div className="max-w-3xl mx-auto h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+				<div className="max-w-3xl mx-auto h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 gap-8 sm:gap-5 md:gap-10 lg:gap-16 xl:gap-20 2xl:gap-24">
 					<NextLink
 						title="Home"
 						href="/"

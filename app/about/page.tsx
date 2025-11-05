@@ -14,7 +14,7 @@ export default function About() {
 
 	return (
 		<div className="bg-zinc-50 dark:bg-gray-900">
-			<div className="min-h-[calc(100vh-var(--spacing)*16)] flex items-center content-center justify-center text-center flex-col gap-10 py-10">
+			<div className="min-h-[calc(100dvh-var(--spacing)*16)] flex items-center content-center justify-center text-center flex-col gap-10 py-10">
 				<h1 className="font-bold text-3xl select-none mb-4">
 					{isMounted ? t("about.title") : <>&nbsp;</>}
 				</h1>

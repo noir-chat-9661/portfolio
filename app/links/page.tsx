@@ -16,7 +16,7 @@ export default function LinksPage() {
 	}, []);
 
 	return (
-		<div className="min-h-[calc(100vh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900">
+		<div className="min-h-[calc(100dvh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900">
 			<div className="flex flex-col items-center justify-start py-10 font-sans select-none">
 				<h1 className="text-3xl font-bold">{isMounted ? t("links.title") : <>&nbsp;</>}</h1>
 				<div className="h-10" />
