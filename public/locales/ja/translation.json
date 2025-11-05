@@ -39,5 +39,41 @@
 			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, Cなど",
 			"specialities": "バックエンド開発・Discord Bot開発"
 		}
+	},
+	"products": {
+		"title": "作品一覧",
+		"test": "試す",
+		"brainfuckCalculator": {
+			"title": "Brainfuck電卓",
+			"description": "Brainfuckで書かれた電卓アプリケーションです。基本的な四則演算や簡単な計算を行うことができます。",
+			"example": "例: 1+1=",
+			"loading": "読み込み中...",
+			"runButton": "計算",
+			"running": "実行中...",
+			"exampleLabel": "例:",
+			"outputLabel": "出力:",
+			"errorLabel": "エラー:",
+			"resultLabel": "結果:",
+			"expressionLabel": "式:",
+			"failedToLoad": "Brainfuck電卓のコードの読み込みに失敗しました。",
+			"calculationError": "計算エラー",
+			"supportedOperations": "サポートされている演算: +, -, *, /, ="
+		},
+		"trpgDiceRoller": {
+			"title": "TRPGダイスローラー",
+			"description": "TRPG用のダイスローラーです。様々なダイス表記に対応しており、複雑なダイスロールも簡単に行えます。",
+			"example": "例: 2d6+3",
+			"loading": "読み込み中...",
+			"runButton": "ロール",
+			"running": "実行中...",
+			"inputLabel": "ダイス:",
+			"exampleLabel": "例:",
+			"outputLabel": "出力:",
+			"errorLabel": "エラー:",
+			"resultLabel": "結果:",
+			"expressionLabel": "式:",
+			"failedToLoad": "TRPGダイスローラーのコードの読み込みに失敗しました。",
+			"calculationError": "計算エラー"
+		}
 	}
 }
