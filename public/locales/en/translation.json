@@ -39,5 +39,41 @@
 			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, C, etc.",
 			"specialities": "Backend Development, Discord Bot Development"
 		}
+	},
+	"products": {
+		"title": "Products",
+		"test": "Test",
+		"brainfuckCalculator": {
+			"title": "Brainfuck Calculator",
+			"description": "A calculator application that can execute programs written in the Brainfuck language. It supports basic arithmetic operations and simple calculations.",
+			"example": "Example: 1+1=",
+			"loading": "Loading...",
+			"runButton": "Calculate",
+			"running": "Computing...",
+			"exampleLabel": "Examples:",
+			"outputLabel": "Output:",
+			"errorLabel": "Error:",
+			"resultLabel": "Result:",
+			"expressionLabel": "Expression:",
+			"failedToLoad": "Failed to load Brainfuck Calculator code.",
+			"calculationError": "Calculation Error",
+			"supportedOperations": "Supported operations: +, -, *, /, ="
+		},
+		"trpgDiceRoller": {
+			"title": "TRPG Dice Roller",
+			"description": "A dice roller application for Tabletop Role-Playing Games (TRPGs). It can evaluate complex dice expressions and return the results.",
+			"example": "Example: 2d6+3",
+			"loading": "Loading...",
+			"runButton": "Roll Dice",
+			"running": "Rolling...",
+			"inputLabel": "Input:",
+			"exampleLabel": "Examples:",
+			"outputLabel": "Output:",
+			"errorLabel": "Error:",
+			"resultLabel": "Result:",
+			"expressionLabel": "Expression:",
+			"failedToLoad": "Failed to load TRPG Dice Roller code.",
+			"calculationError": "Calculation Error"
+		}
 	}
 }
