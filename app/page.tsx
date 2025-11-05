@@ -30,8 +30,8 @@ export default function Home() {
 	};
 
 	return (
-		<div className="bg-zinc-50 font-sans dark:bg-gray-900">
-			<div className="h-[calc(100vh-var(--spacing)*16)] flex items-center content-center justify-center text-center flex-col relative">
+		<div className="bg-zinc-50 font-sans dark:bg-gray-700">
+			<div className="min-h-[calc(100dvh-var(--spacing)*16)] flex items-center content-center justify-center text-center flex-col relative">
 				<div
 					className={cn(
 						"select-none animate-fade-in transition-[opacity,translate] duration-1800 ease-in-out",
@@ -48,7 +48,7 @@ export default function Home() {
 						alt="Icon"
 						width={128}
 						height={128}
-						className="mt-10 mx-auto w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+						className="mt-10 mx-auto w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 select-none pointer-events-none"
 					/>
 				</div>
 				
