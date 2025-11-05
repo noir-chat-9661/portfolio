@@ -25,7 +25,7 @@ export default function NotFound() {
 	}, []);
 
 	return (
-		<Empty className="bg-zinc-50 dark:bg-gray-900 min-h-[100cqh] flex flex-col justify-center items-center select-none">
+		<Empty className="bg-zinc-50 dark:bg-gray-900 min-h-[calc(100dvh-var(--spacing)*16)] flex flex-col justify-center items-center select-none">
 			<EmptyHeader>
 				<EmptyMedia variant="icon">
 					<FolderXIcon />
