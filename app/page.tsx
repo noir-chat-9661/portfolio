@@ -30,7 +30,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="bg-zinc-50 font-sans dark:bg-gray-700">
+		<div className="bg-zinc-50 font-sans dark:bg-gray-900">
 			<div className="min-h-[calc(100dvh-var(--spacing)*16)] flex items-center content-center justify-center text-center flex-col relative">
 				<div
 					className={cn(
