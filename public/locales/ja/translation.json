@@ -73,7 +73,8 @@
 			"resultLabel": "結果:",
 			"expressionLabel": "式:",
 			"failedToLoad": "TRPGダイスローラーのコードの読み込みに失敗しました。",
-			"calculationError": "計算エラー"
+			"calculationError": "計算エラー",
+			"inputPlaceholder": "ダイス表記を入力してください。"
 		}
 	}
 }

@@ -73,7 +73,8 @@
 			"resultLabel": "Result:",
 			"expressionLabel": "Expression:",
 			"failedToLoad": "Failed to load TRPG Dice Roller code.",
-			"calculationError": "Calculation Error"
+			"calculationError": "Calculation Error",
+			"inputPlaceholder": "Enter a dice expression."
 		}
 	}
 }

@@ -17,8 +17,8 @@ import "@/lib/i18n";
 
 interface Product {
 	name: string;
-	href: string;
-	test: string | null;
+	github?: string;
+	test?: string | null;
 	description: {
 		ja: string;
 		en: string;
@@ -105,23 +105,27 @@ export function Products() {
 											</Button>
 										</NextLink>
 									)}
-									<NextLink
-										href={product.href}
-										target="_blank"
-										rel="noopener noreferrer"
-										className={
-											product.test ? "flex-1" : "w-full"
-										}
-									>
-										<Button
-											variant="outline"
-											size="sm"
-											className="w-full"
+									{product.github && (
+										<NextLink
+											href={product.github}
+											target="_blank"
+											rel="noopener noreferrer"
+											className={
+												product.test
+													? "flex-1"
+													: "w-full"
+											}
 										>
-											<ExternalLink className="mr-2 h-4 w-4" />
-											GitHub
-										</Button>
-									</NextLink>
+											<Button
+												variant="outline"
+												size="sm"
+												className="w-full"
+											>
+												<ExternalLink className="mr-2 h-4 w-4" />
+												GitHub
+											</Button>
+										</NextLink>
+									)}
 								</div>
 							</CardFooter>
 						</Card>

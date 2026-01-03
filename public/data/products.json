@@ -1,7 +1,7 @@
 [
 	{
 		"name": "portfolio",
-		"href": "https://github.com/noir-chat-9661/portfolio",
+		"github": "https://github.com/noir-chat-9661/portfolio",
 		"test": null,
 		"description": {
 			"ja": "このサイトです。Next.jsとTailwind CSSで作成されています。",
@@ -11,7 +11,7 @@
 	},
 	{
 		"name": "brainfuck-calculator",
-		"href": "https://github.com/noir-chat-9661/brainfuck_calculator",
+		"github": "https://github.com/noir-chat-9661/brainfuck_calculator",
 		"test": "/products/brainfuck-calculator",
 		"description": {
 			"ja": "Brainfuckで書いた任意桁同士の四則演算電卓です。",
@@ -21,12 +21,21 @@
 	},
 	{
 		"name": "trpg-dice-roller",
-		"href": "https://github.com/noir-chat-9661/trpg-dice-roller",
+		"github": "https://github.com/noir-chat-9661/trpg-dice-roller",
 		"test": "/products/trpg-dice-roller",
 		"description": {
 			"ja": "TRPG用のダイスを振れるパッケージです。四則演算、ルート、べき乗、括弧、ダイスのネストなどに対応しています。",
 			"en": "A package that can roll dice for TRPGs. It supports arithmetic operations, roots, exponents, parentheses, and nested dice."
 		},
 		"techStack": ["TypeScript"]
+	},
+	{
+		"name": "seatwizard",
+		"test": "https://seatwizard.noirch.at",
+		"description": {
+			"ja": "席替えの配置決定をできるアプリケーションです。",
+			"en": "An application that can determine the seating arrangement."
+		},
+		"techStack": ["TypeScript", "React", "Tailwind CSS"]
 	}
 ]
