@@ -1,18 +1,12 @@
 "use client";
+import { Calculator, Loader2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-	CardDescription,
-} from "@/components/ui/card";
 import { executeBrainfuck } from "@/lib/brainfuckInterpreter";
 import { fetchGitHubRaw } from "@/lib/projectFetcher";
-import { useState, useEffect } from "react";
-import { Loader2, Calculator } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 import "@/lib/i18n";
 
@@ -31,17 +25,15 @@ export default function BrainfuckCalculatorPage() {
 		setIsMounted(true);
 		async function load() {
 			try {
-				const raw = await fetchGitHubRaw(
-					"noir-chat-9661",
-					"brainfuck_calculator",
-					"calc_noSpaceAndComment.bf"
-				);
+				const raw = await fetchGitHubRaw("noir-chat-9661", "brainfuck_calculator", "calc_noSpaceAndComment.bf");
 				setCode(raw);
 			} catch (err) {
 				setError(
 					err instanceof Error
 						? err.message
-						: isMounted ? t("products.brainfuckCalculator.failedToLoad") : ""
+						: isMounted
+							? t("products.brainfuckCalculator.failedToLoad")
+							: "",
 				);
 			} finally {
 				setLoading(false);
@@ -62,9 +54,7 @@ export default function BrainfuckCalculatorPage() {
 				const result = executeBrainfuck(code, input);
 				setOutput(result);
 			} catch (err) {
-				setError(
-					err instanceof Error ? err.message : "Calculation error"
-				);
+				setError(err instanceof Error ? err.message : "Calculation error");
 			} finally {
 				setRunning(false);
 			}
@@ -108,7 +98,9 @@ export default function BrainfuckCalculatorPage() {
 						<CardContent className="space-y-4">
 							{error && (
 								<div className="p-4 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-md border border-red-200 dark:border-red-800">
-									<p className="font-semibold">{isMounted ? t("products.brainfuckCalculator.errorLabel") : <>&nbsp;</>}</p>
+									<p className="font-semibold">
+										{isMounted ? t("products.brainfuckCalculator.errorLabel") : <>&nbsp;</>}
+									</p>
 									<p className="text-sm mt-1">{error}</p>
 								</div>
 							)}
@@ -122,28 +114,20 @@ export default function BrainfuckCalculatorPage() {
 										placeholder="1+1="
 										className="font-mono text-sm flex-1"
 										value={input}
-										onChange={(e) =>
-											setInput(e.target.value)
-										}
-										onKeyDown={(e) =>
-											e.key === "Enter" && calc()
-										}
+										onChange={(e) => setInput(e.target.value)}
+										onKeyDown={(e) => e.key === "Enter" && calc()}
 										disabled={running}
 									/>
-									<Button
-										onClick={calc}
-										disabled={running || !input}
-										className="min-w-[120px]"
-									>
+									<Button onClick={calc} disabled={running || !input} className="min-w-[120px]">
 										{running ? (
 											<>
 												<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 												{isMounted ? t("products.brainfuckCalculator.running") : <>&nbsp;</>}
 											</>
+										) : isMounted ? (
+											t("products.brainfuckCalculator.runButton")
 										) : (
-											<>
-												{isMounted ? t("products.brainfuckCalculator.runButton") : <>&nbsp;</>}
-											</>
+											<>&nbsp;</>
 										)}
 									</Button>
 								</div>
@@ -181,9 +165,7 @@ export default function BrainfuckCalculatorPage() {
 							</div>
 
 							<div className="text-xs text-gray-500 dark:text-gray-400 pt-4 border-t">
-								<p>
-									{isMounted ? t("products.brainfuckCalculator.supportedOperations") : <>&nbsp;</>}
-								</p>
+								<p>{isMounted ? t("products.brainfuckCalculator.supportedOperations") : <>&nbsp;</>}</p>
 							</div>
 						</CardContent>
 					</Card>

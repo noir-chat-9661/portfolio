@@ -1,9 +1,14 @@
 "use client";
-import { useState, useEffect } from "react"; 
-import { Sun, Moon, Settings } from "lucide-react";
+import { Moon, Settings, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import "@/lib/i18n";
 
@@ -19,7 +24,7 @@ export function ThemeButton() {
 		return (
 			<DropdownMenu>
 				<DropdownMenuTrigger className="btn-ghost btn-circle btn" disabled>
-					<Sun className="opacity-50" /> 
+					<Sun className="opacity-50" />
 				</DropdownMenuTrigger>
 			</DropdownMenu>
 		);

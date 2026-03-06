@@ -1,7 +1,12 @@
 "use client";
 import { Globe } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import "@/lib/i18n";
 
@@ -16,7 +21,7 @@ export function LangButton() {
 				<DropdownMenuItem
 					className="h-10 text-lg"
 					onClick={() => {
-						i18n.changeLanguage('ja');
+						i18n.changeLanguage("ja");
 					}}
 				>
 					日本語
@@ -24,7 +29,7 @@ export function LangButton() {
 				<DropdownMenuItem
 					className="h-10 text-lg"
 					onClick={() => {
-						i18n.changeLanguage('en');
+						i18n.changeLanguage("en");
 					}}
 				>
 					English

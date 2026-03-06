@@ -1,20 +1,13 @@
-"use client"
-import { FolderXIcon } from "lucide-react"
-import NextLink from "next/link"
-import {
-	Empty,
-	EmptyContent,
-	EmptyDescription,
-	EmptyHeader,
-	EmptyMedia,
-	EmptyTitle,
-} from "@/components/ui/empty"
-import { Button } from "@/components/ui/button"
-import { useTranslation } from "react-i18next"
-import { useState, useEffect } from "react";
+"use client";
+import { FolderXIcon } from "lucide-react";
+import NextLink from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty";
 
 import "@/lib/i18n";
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
 
 export default function NotFound() {
 	const { t } = useTranslation();
@@ -40,16 +33,10 @@ export default function NotFound() {
 				</EmptyDescription>
 			</EmptyHeader>
 			<EmptyContent>
-				<Button
-					asChild
-					variant="outline"
-					className="mt-4 text-md px-4 py-2"
-				>
-					<NextLink href="/">
-						{isMounted ? t("notFound.back") : <>&nbsp;</>}
-					</NextLink>
+				<Button asChild variant="outline" className="mt-4 text-md px-4 py-2">
+					<NextLink href="/">{isMounted ? t("notFound.back") : <>&nbsp;</>}</NextLink>
 				</Button>
 			</EmptyContent>
 		</Empty>
-	)
+	);
 }

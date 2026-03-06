@@ -1,10 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { FaTwitter as Twitter, FaGithub as GitHub, FaInstagram as Instagram, FaDiscord as Discord } from "react-icons/fa";
 import { FileText, Mail } from "lucide-react";
-import NextLink from "next/link"; 
+import NextLink from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import {
+	FaDiscord as Discord,
+	FaGithub as GitHub,
+	FaInstagram as Instagram,
+	FaTwitter as Twitter,
+} from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
 import "@/lib/i18n";
 
@@ -21,94 +26,48 @@ export default function LinksPage() {
 			<div className="flex flex-col items-center justify-start py-10 font-sans select-none">
 				<h1 className="text-3xl font-bold">{isMounted ? t("links.title") : <>&nbsp;</>}</h1>
 				<div className="h-10" />
-				<NextLink
-					href="https://blog.noirch.at"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-4 py-5 flex items-center"
-					>
+				<NextLink href="https://blog.noirch.at" target="_blank" rel="noopener noreferrer">
+					<Button asChild variant="outline" className="mt-4 text-xl px-4 py-5 flex items-center">
 						<div>
 							<FileText className="mr-2 h-10 w-10" />
 							Blog
 						</div>
 					</Button>
 				</NextLink>
-				<NextLink
-					href="https://github.com/noir-chat-9661"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-5 py-5 flex items-center"
-					>
+				<NextLink href="https://github.com/noir-chat-9661" target="_blank" rel="noopener noreferrer">
+					<Button asChild variant="outline" className="mt-4 text-xl px-5 py-5 flex items-center">
 						<div>
 							<GitHub className="mr-2 h-10 w-10" />
 							noir-chat-9661
 						</div>
 					</Button>
 				</NextLink>
-				<NextLink
-					href="https://twitter.com/sgr_9661_ea"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-4 py-5 flex items-center"
-					>
+				<NextLink href="https://twitter.com/sgr_9661_ea" target="_blank" rel="noopener noreferrer">
+					<Button asChild variant="outline" className="mt-4 text-xl px-4 py-5 flex items-center">
 						<div>
 							<Twitter className="mr-2 h-10 w-10" />
 							sgr_9661_ea
 						</div>
 					</Button>
 				</NextLink>
-				<NextLink
-					href="https://www.instagram.com/sgr_9661_ea/"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-4 py-5 flex items-center"
-					>
+				<NextLink href="https://www.instagram.com/sgr_9661_ea/" target="_blank" rel="noopener noreferrer">
+					<Button asChild variant="outline" className="mt-4 text-xl px-4 py-5 flex items-center">
 						<div>
 							<Instagram className="mr-2 h-10 w-10" />
 							sgr_9661_ea
 						</div>
 					</Button>
 				</NextLink>
-				<NextLink
-					href="https://discordapp.com/users/noir_chat_9661"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-4 py-5 flex items-center"
-					>
+				<NextLink href="https://discordapp.com/users/noir_chat_9661" target="_blank" rel="noopener noreferrer">
+					<Button asChild variant="outline" className="mt-4 text-xl px-4 py-5 flex items-center">
 						<div>
 							<Discord className="mr-2 h-10 w-10" />
 							noir_chat_9661
 						</div>
 					</Button>
 				</NextLink>
-				<NextLink
-					href="mailto:contact@noirch.at"
-				>
-					<Button
-						asChild
-						variant="outline"
-						className="mt-4 text-xl px-4 py-5 flex items-center"
-					>
+				<NextLink href="mailto:contact@noirch.at">
+					<Button asChild variant="outline" className="mt-4 text-xl px-4 py-5 flex items-center">
 						<div>
 							<Mail className="mr-2 h-10 w-10" />
 							contact@noirch.at

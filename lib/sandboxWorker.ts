@@ -42,32 +42,32 @@ export function executeSandboxed(code: string, timeout: number = 5000): Promise<
 				}
 			};
 		`;
-		
-		const blob = new Blob([workerCode], { type: 'application/javascript' });
+
+		const blob = new Blob([workerCode], { type: "application/javascript" });
 		const worker = new Worker(URL.createObjectURL(blob));
 
 		const timeoutId = setTimeout(() => {
 			worker.terminate();
 			resolve({
 				success: false,
-				error: `Execution timeout (exceeded ${timeout}ms)`
+				error: `Execution timeout (exceeded ${timeout}ms)`,
 			});
 		}, timeout);
-		
+
 		worker.onmessage = (e: MessageEvent<ExecutionResult>) => {
 			clearTimeout(timeoutId);
 			worker.terminate();
 			URL.revokeObjectURL(blob as any);
 			resolve(e.data);
 		};
-		
+
 		worker.onerror = (error) => {
 			clearTimeout(timeoutId);
 			worker.terminate();
 			URL.revokeObjectURL(blob as any);
 			resolve({
 				success: false,
-				error: error.message || 'Worker error occurred'
+				error: error.message || "Worker error occurred",
 			});
 		};
 

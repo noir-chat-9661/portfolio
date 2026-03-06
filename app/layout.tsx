@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Zen_Kurenaido } from "next/font/google";
-import { ThemeProvider } from "next-themes"
+import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 
 const geistZenKurenaido = Zen_Kurenaido({
@@ -22,15 +22,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ja" suppressHydrationWarning={true}>
-			<body
-				className={`${geistZenKurenaido.variable} antialiased`}
-			>
+			<body className={`${geistZenKurenaido.variable} antialiased`}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
 					<div className="fixed inset-0 flex flex-col">
 						<Header />
-						<div className="flex-1 overflow-y-auto">
-							{children}
-						</div>
+						<div className="flex-1 overflow-y-auto">{children}</div>
 					</div>
 				</ThemeProvider>
 			</body>

@@ -2,7 +2,7 @@ export async function fetchGitHubRaw(
 	owner: string,
 	repo: string,
 	path: string,
-	branch: string = "main"
+	branch: string = "main",
 ): Promise<string> {
 	const url = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
 
@@ -10,9 +10,7 @@ export async function fetchGitHubRaw(
 		const response = await fetch(url);
 
 		if (!response.ok) {
-			throw new Error(
-				`Failed to fetch file: ${response.status} ${response.statusText}`
-			);
+			throw new Error(`Failed to fetch file: ${response.status} ${response.statusText}`);
 		}
 
 		return await response.text();
@@ -22,19 +20,14 @@ export async function fetchGitHubRaw(
 	}
 }
 
-export async function fetchNpmPackage(
-	packageName: string,
-	filePath: string = "index.js"
-): Promise<string> {
+export async function fetchNpmPackage(packageName: string, filePath: string = "index.js"): Promise<string> {
 	const url = `https://unpkg.com/${packageName}/${filePath}`;
 
 	try {
 		const response = await fetch(url);
 
 		if (!response.ok) {
-			throw new Error(
-				`Failed to fetch npm package: ${response.status} ${response.statusText}`
-			);
+			throw new Error(`Failed to fetch npm package: ${response.status} ${response.statusText}`);
 		}
 
 		return await response.text();
@@ -48,16 +41,11 @@ export async function fetchReadme(
 	type: "github" | "npm",
 	packageNameOrRepo: string,
 	owner?: string,
-	branch: string = "main"
+	branch: string = "main",
 ): Promise<string> {
 	try {
 		if (type === "github" && owner) {
-			return await fetchGitHubRaw(
-				owner,
-				packageNameOrRepo,
-				"README.md",
-				branch
-			);
+			return await fetchGitHubRaw(owner, packageNameOrRepo, "README.md", branch);
 		} else if (type === "npm") {
 			const url = `https://unpkg.com/${packageNameOrRepo}/README.md`;
 			const response = await fetch(url);

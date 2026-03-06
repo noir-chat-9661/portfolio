@@ -37,27 +37,27 @@ export function executeBrainfuck(code: string, input: string = ""): string {
 		steps++;
 		const command = cleanCode[codePointer];
 
-		if (command == ">") {
+		if (command === ">") {
 			pointer = (pointer + 1) % 30000;
-		} else if (command == "<") {
+		} else if (command === "<") {
 			pointer = (pointer - 1 + 30000) % 30000;
-		} else if (command == "+") {
+		} else if (command === "+") {
 			memory[pointer] = (memory[pointer] + 1) & 0xffff;
-		} else if (command == "-") {
+		} else if (command === "-") {
 			memory[pointer] = (memory[pointer] - 1) & 0xffff;
-		} else if (command == ".") {
+		} else if (command === ".") {
 			output += String.fromCharCode(memory[pointer]);
-		} else if (command == ",") {
+		} else if (command === ",") {
 			if (inputPointer < input.length) {
 				memory[pointer] = input.charCodeAt(inputPointer++);
 			} else {
 				throw new Error("Input exhausted");
 			}
-		} else if (command == "[") {
+		} else if (command === "[") {
 			if (memory[pointer] === 0) {
 				codePointer = loopMap.get(codePointer)!;
 			}
-		} else if (command == "]") {
+		} else if (command === "]") {
 			if (memory[pointer] !== 0) {
 				codePointer = loopMap.get(codePointer)!;
 			}

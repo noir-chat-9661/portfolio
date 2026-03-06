@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
-import { Dices, Calculator } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useTranslation } from "react-i18next";
+import { Calculator, Dices } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import "@/lib/i18n";
 
@@ -17,9 +17,7 @@ export default function ProductsPage() {
 	return (
 		<div className="min-h-[calc(100dvh-var(--spacing)*16)] bg-zinc-50 dark:bg-gray-900 p-6">
 			<div className="max-w-4xl mx-auto space-y-6">
-				<h1 className="text-3xl font-bold mb-6 text-center">
-					{isMounted ? t("products.title") : <>&nbsp;</>}
-				</h1>
+				<h1 className="text-3xl font-bold mb-6 text-center">{isMounted ? t("products.title") : <>&nbsp;</>}</h1>
 				<div className="space-y-6">
 					<Card className="hover:shadow-lg transition-shadow">
 						<Link href="/products/brainfuck-calculator" className="no-underline">

@@ -1,11 +1,11 @@
 "use client";
+import { Dices } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
-import { executeSandboxed } from "@/lib/sandboxWorker";
-import { fetchNpmPackage } from "@/lib/projectFetcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dices } from "lucide-react";
+import { fetchNpmPackage } from "@/lib/projectFetcher";
+import { executeSandboxed } from "@/lib/sandboxWorker";
 
 import "@/lib/i18n";
 import { Input } from "@/components/ui/input";
@@ -40,13 +40,19 @@ export default function TRPGDiceRollerPage() {
 		setResult("");
 		try {
 			executeSandboxed(`exports = {};\n${code}\nconsole.log(calculateDiceExpression(\`${input}\`));`, 5000)
-				.then(result => {
+				.then((result) => {
 					console.log("Sandbox result:", result);
 					const data = JSON.parse(result.output || "{}");
 					setResult(data.output || "");
 				})
-				.catch(err => {
-					setError(err instanceof Error ? err.message : isMounted ? t("products.trpgDiceRoller.executionError") : "");
+				.catch((err) => {
+					setError(
+						err instanceof Error
+							? err.message
+							: isMounted
+								? t("products.trpgDiceRoller.executionError")
+								: "",
+					);
 				})
 				.finally(() => {
 					setRunning(false);
@@ -62,9 +68,7 @@ export default function TRPGDiceRollerPage() {
 				<div className="container mx-auto p-4">
 					<Card className="max-w-3xl mx-auto dark:bg-gray-900/50">
 						<CardHeader>
-							<CardTitle>
-								{isMounted ? t("products.trpgDiceRoller.title") : <>&nbsp;</>}
-							</CardTitle>
+							<CardTitle>{isMounted ? t("products.trpgDiceRoller.title") : <>&nbsp;</>}</CardTitle>
 						</CardHeader>
 						<CardContent>
 							<div className="mb-4">
@@ -82,9 +86,15 @@ export default function TRPGDiceRollerPage() {
 								<Button onClick={run} disabled={running || !code || !input}>
 									<Dices className="mr-1 h-5 w-5" />
 									{running ? (
-										isMounted ? t("products.trpgDiceRoller.running") : <>&nbsp;</>
+										isMounted ? (
+											t("products.trpgDiceRoller.running")
+										) : (
+											<>&nbsp;</>
+										)
+									) : isMounted ? (
+										t("products.trpgDiceRoller.runButton")
 									) : (
-										isMounted ? t("products.trpgDiceRoller.runButton") : <>&nbsp;</>
+										<>&nbsp;</>
 									)}
 								</Button>
 							</div>
@@ -113,5 +123,3 @@ export default function TRPGDiceRollerPage() {
 		</div>
 	);
 }
-
-

@@ -36,6 +36,6 @@
 			"ja": "席替えの配置決定をできるアプリケーションです。",
 			"en": "An application that can determine the seating arrangement."
 		},
-		"techStack": ["TypeScript", "React", "Tailwind CSS"]
+		"techStack": ["Preact", "Tailwind CSS", "TypeScript"]
 	}
 ]

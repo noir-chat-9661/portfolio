@@ -1,12 +1,12 @@
 "use client";
-import NextLink from "next/link";
+import { Files, House, Link, User } from "lucide-react";
 import Image from "next/image";
+import NextLink from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LangButton } from "@/components/langButton";
 import { ThemeButton } from "@/components/themeButton";
-import { Files, House, Link, User } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 
 import "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -28,10 +28,7 @@ export function Header() {
 			className="sticky top-0 left-0 w-full h-16 bg-white border-b border-gray-200 z-50 dark:bg-gray-800 dark:border-gray-700 select-none"
 		>
 			<div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex items-center">
-				<NextLink
-					title="home"
-					href="/"
-				>
+				<NextLink title="home" href="/">
 					<Image
 						src="/picts/icon.webp"
 						alt="Icon"
@@ -41,10 +38,7 @@ export function Header() {
 					/>
 				</NextLink>
 				<div className={cn("text-xl font-bold", isProductsPage ? "sm:block hidden" : "lg:block hidden")}>
-					{isMounted
-						? t(isProductsPage ? "products.title" : "header.title")
-						: <>&nbsp;</>
-					}
+					{isMounted ? t(isProductsPage ? "products.title" : "header.title") : <>&nbsp;</>}
 				</div>
 			</div>
 			{isProductsPage ? (
@@ -55,9 +49,7 @@ export function Header() {
 						className="sm:w-25 w-12 text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex flex-col items-center sm:flex-row"
 					>
 						<House className="inline-block mb-1 mr-1 h-5 w-5" />
-						<span className="sm:text-lg text-sm">
-							{isMounted ? t("header.home") : <>&nbsp;</>}
-						</span>
+						<span className="sm:text-lg text-sm">{isMounted ? t("header.home") : <>&nbsp;</>}</span>
 					</NextLink>
 					<NextLink
 						title="Products"
@@ -65,9 +57,7 @@ export function Header() {
 						className="sm:w-25 w-15 text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex flex-col items-center sm:flex-row"
 					>
 						<Files className="inline-block mb-1 mr-1 h-5 w-5" />
-						<span className="md:text-lg text-sm">
-							{isMounted ? t("products.title") : <>&nbsp;</>}
-						</span>
+						<span className="md:text-lg text-sm">{isMounted ? t("products.title") : <>&nbsp;</>}</span>
 					</NextLink>
 				</div>
 			) : (
@@ -78,9 +68,7 @@ export function Header() {
 						className="sm:w-25 w-12 text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex flex-col items-center sm:flex-row"
 					>
 						<House className="inline-block mb-1 mr-1 h-5 w-5" />
-						<span className="sm:text-lg text-sm">
-							{isMounted ? t("header.home") : <>&nbsp;</>}
-						</span>
+						<span className="sm:text-lg text-sm">{isMounted ? t("header.home") : <>&nbsp;</>}</span>
 					</NextLink>
 					<NextLink
 						title="About"
@@ -88,9 +76,7 @@ export function Header() {
 						className="sm:w-25 w-15 text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex flex-col items-center sm:flex-row"
 					>
 						<User className="inline-block mb-1 mr-1 h-5 w-5" />
-						<span className="sm:text-lg text-sm">
-							{isMounted ? t("header.about") : <>&nbsp;</>}
-						</span>
+						<span className="sm:text-lg text-sm">{isMounted ? t("header.about") : <>&nbsp;</>}</span>
 					</NextLink>
 					<NextLink
 						title="Links"
@@ -98,9 +84,7 @@ export function Header() {
 						className="sm:w-25 w-15 text-lg font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex flex-col items-center sm:flex-row"
 					>
 						<Link className="inline-block mb-1 mr-1 h-5 w-5" />
-						<div className="sm:text-lg text-sm">
-							{isMounted ? t("header.link") : <>&nbsp;</>}
-						</div>
+						<div className="sm:text-lg text-sm">{isMounted ? t("header.link") : <>&nbsp;</>}</div>
 					</NextLink>
 				</div>
 			)}

@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
 	images: isGitHubPages ? {
 		unoptimized: true,
 	} : undefined,
-	allowedDevOrigins: ["http://172.26.64.1:3000"],
+	allowedDevOrigins: [],
 };
 
 export default nextConfig;
