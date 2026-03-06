@@ -44,7 +44,7 @@ jobs:
                   NODE_OPTIONS: '--max-old-space-size=4096'
 
             - name: Add CNAME
-              run: echo "yourdomain.com" > ./out/CNAME
+              run: echo "noirch.at" > ./out/CNAME
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
