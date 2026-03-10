@@ -20,7 +20,13 @@
 		"back": "Go Back Home"
 	},
 	"links": {
-		"title": "Links Page"
+		"title": "Links Page",
+		"activity": "Activity",
+		"social": "Social",
+		"contact": "Contact",
+		"blog": "Blog",
+		"email": "Email",
+		"ask": "Ask me anything"
 	},
 	"about": {
 		"title": "About Me",

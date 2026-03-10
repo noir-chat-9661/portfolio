@@ -20,7 +20,13 @@
 		"back": "ホームに戻る"
 	},
 	"links": {
-		"title": "リンク集"
+		"title": "リンク集",
+		"activity": "活動",
+		"social": "SNS",
+		"contact": "連絡",
+		"blog": "ブログ",
+		"email": "メール",
+		"ask": "マシュマロ"
 	},
 	"about": {
 		"title": "自己紹介",
