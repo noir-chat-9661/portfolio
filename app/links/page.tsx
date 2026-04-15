@@ -31,12 +31,12 @@ export default function LinksPage() {
 				<div className="flex flex-col gap-12 w-full px-5">
 					<section className="flex flex-col items-center">
 						<h2 className="text-2xl font-semibold text-zinc-600 dark:text-zinc-300 mb-4 px-8 tracking-wider">
-							{t("links.activity")}
+							{isMounted ? t("links.activity") : <>&nbsp;</>}
 						</h2>
 						<div className="flex flex-row flex-wrap justify-center gap-4">
 							<NextLink href="https://blog.noirch.at" target="_blank" rel="noopener noreferrer">
 								<Button
-									title={t("links.blog")}
+									title={isMounted ? t("links.blog") : ""}
 									asChild
 									variant="outline"
 									className="text-xl px-8 py-5 flex items-center w-32"
@@ -45,7 +45,7 @@ export default function LinksPage() {
 								>
 									<div>
 										<FileText className="mr-2 h-10 w-10" />
-										{t("links.blog")}
+										{isMounted ? t("links.blog") : <>&nbsp;</>}
 									</div>
 								</Button>
 							</NextLink>
@@ -73,7 +73,7 @@ export default function LinksPage() {
 
 					<section className="flex flex-col items-center">
 						<h2 className="text-2xl font-semibold text-zinc-600 dark:text-zinc-300 mb-4 px-8 tracking-wider">
-							{t("links.social")}
+							{isMounted ? t("links.social") : <>&nbsp;</>}
 						</h2>
 						<div className="flex flex-row flex-wrap justify-center gap-4">
 							<NextLink href="https://twitter.com/sgr_9661_ea" target="_blank" rel="noopener noreferrer">
@@ -134,12 +134,12 @@ export default function LinksPage() {
 
 					<section className="flex flex-col items-center">
 						<h2 className="text-2xl font-semibold text-zinc-600 dark:text-zinc-300 mb-4 px-8 tracking-wider">
-							{t("links.contact")}
+							{isMounted ? t("links.contact") : <>&nbsp;</>}
 						</h2>
 						<div className="flex flex-row flex-wrap justify-center gap-4">
 							<NextLink href="mailto:contact@noirch.at">
 								<Button
-									title={t("links.email")}
+									title={isMounted ? t("links.email") : ""}
 									asChild
 									variant="outline"
 									onMouseOver={() => setNowHovered("email")}
@@ -148,7 +148,7 @@ export default function LinksPage() {
 								>
 									<div>
 										<Mail className="mr-2 h-10 w-10" />
-										{nowHovered === "email" ? "contact@noirch.at" : t("links.email")}
+										{nowHovered === "email" ? "contact@noirch.at" : isMounted ? t("links.email") : <>&nbsp;</>}
 									</div>
 								</Button>
 							</NextLink>
@@ -158,7 +158,7 @@ export default function LinksPage() {
 								rel="noopener noreferrer"
 							>
 								<Button
-									title={t("links.ask")}
+									title={isMounted ? t("links.ask") : ""}
 									asChild
 									variant="outline"
 									onMouseOver={() => setNowHovered("ask")}
@@ -167,7 +167,7 @@ export default function LinksPage() {
 								>
 									<div>
 										<MessageCircleMore className="mr-2 h-10 w-10" />
-										{t("links.ask")}
+										{isMounted ? t("links.ask") : <>&nbsp;</>}
 									</div>
 								</Button>
 							</NextLink>

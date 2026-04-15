@@ -37,5 +37,15 @@
 			"en": "An application that can determine the seating arrangement."
 		},
 		"techStack": ["Preact", "Tailwind CSS", "TypeScript"]
+	},
+	{
+		"name": "bigmotor_lang",
+		"github": "https://github.com/noir-chat-9661/bigmotor_lang",
+		"test": "https://npmjs.com/package/bigmotor_lang",
+		"description": {
+			"ja": "「教育」と「死刑」のみで構成するbrainfuckのコンパイラおよびインタプリタです。",
+			"en": "A compiler and interpreter for brainfuck composed only of '教育(education)' and '死刑(death penalty)'."
+		},
+		"techStack": ["TypeScript", "Brainfuck"]
 	}
 ]

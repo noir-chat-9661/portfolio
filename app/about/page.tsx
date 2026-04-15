@@ -31,12 +31,16 @@ export default function About() {
 								{isMounted ? t("about.attribute.age") : <>&nbsp;</>}
 							</TableCell>
 							<TableCell className="whitespace-normal break-words">
-								{new Date().getFullYear() -
+								{isMounted ? (
+									new Date().getFullYear() -
 									2006 -
 									(new Date().getMonth() < 4 ||
 									(new Date().getMonth() === 4 && new Date().getDate() < 22)
 										? 1
-										: 0)}
+										: 0)
+								) : (
+									<>&nbsp;</>
+								)}
 							</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
