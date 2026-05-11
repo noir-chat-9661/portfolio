@@ -28,7 +28,7 @@ export function Products() {
 	useEffect(() => {
 		setIsMounted(true);
 
-		fetch("/data/products.json")
+		fetch(`/data/products.json?t=${Date.now()}`, { cache: "no-store" })
 			.then((res) => res.json())
 			.then((data) => {
 				setProducts(data);
