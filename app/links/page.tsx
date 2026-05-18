@@ -148,7 +148,13 @@ export default function LinksPage() {
 								>
 									<div>
 										<Mail className="mr-2 h-10 w-10" />
-										{nowHovered === "email" ? "contact@noirch.at" : isMounted ? t("links.email") : <>&nbsp;</>}
+										{nowHovered === "email" ? (
+											"contact@noirch.at"
+										) : isMounted ? (
+											t("links.email")
+										) : (
+											<>&nbsp;</>
+										)}
 									</div>
 								</Button>
 							</NextLink>

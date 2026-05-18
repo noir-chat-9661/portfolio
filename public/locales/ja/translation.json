@@ -36,7 +36,8 @@
 			"location": "所在地",
 			"occupation": "職業",
 			"technologies": "使用技術",
-			"specialities": "得意分野"
+			"specialities": "得意分野",
+			"activities": "活動実績"
 		},
 		"value": {
 			"name": "凶兆の黒猫",

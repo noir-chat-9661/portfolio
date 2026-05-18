@@ -36,7 +36,8 @@
 			"location": "Location",
 			"occupation": "Occupation",
 			"technologies": "Technologies",
-			"specialities": "Specialities"
+			"specialities": "Specialities",
+			"activities": "Activities"
 		},
 		"value": {
 			"name": "Noir C(h)at",
