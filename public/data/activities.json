@@ -1,13 +1,37 @@
 [
 	{
-		"date": "2026",
+		"date": "2025/8/22",
 		"title": {
-			"ja": "GDGoC Japan Hackathon 運営メンバー",
-			"en": "GDGoC Japan Hackathon Staff Member"
+			"ja": "[参加] Cloudflare Workers Tech Talks in Niigata #1",
+			"en": "[Participant] Cloudflare Workers Tech Talks in Niigata #1"
 		},
 		"description": {
-			"ja": "ハッカソンの運営メンバーとして、イベントの企画・運営に携わりました。",
-			"en": "Participated as a staff member in the planning and management of the hackathon."
+			"ja": "『会津大学学園祭を支え(ようとしてい)る技術』をテーマに発表",
+			"en": "Presented on the topic of 'Technologies Supporting (and Attempting to Support) UoA's Cultural Festival'"
+		},
+		"link": "https://workers-tech.connpass.com/event/363848/"
+	},
+	{
+		"date": "2026/2/1",
+		"title": {
+			"ja": "[参加] 防衛省サイバーコンテスト",
+			"en": "[Participant] Japan Ministry of Defense Cyber Contest"
+		},
+		"description": {
+			"ja": "学生部門チーム順位 8/107位",
+			"en": "Student Division Team Ranking: 8/107"
+		},
+		"link": "https://www.mod.go.jp/j/approach/defense/cyber/c_contest/index.html"
+	},
+	{
+		"date": "2026/2〜2026/3",
+		"title": {
+			"ja": "[運営] GDGoC Japan Hackathon",
+			"en": "[Staff] GDGoC Japan Hackathon"
+		},
+		"description": {
+			"ja": "当日: 会場運営・配信 / 準備: Logistics・インフラ整備",
+			"en": "Logistics and infrastructure setup for the event, as well as venue operations and streaming on the day."
 		},
 		"link": "https://gdsc-jp.connpass.com/event/378883/"
 	}

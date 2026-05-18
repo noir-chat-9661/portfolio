@@ -22,11 +22,9 @@ export function ThemeButton() {
 
 	if (!isMounted) {
 		return (
-			<DropdownMenu>
-				<DropdownMenuTrigger className="btn-ghost btn-circle btn" disabled>
-					<Sun className="opacity-50" />
-				</DropdownMenuTrigger>
-			</DropdownMenu>
+			<button className="btn-ghost btn-circle btn" disabled type="button">
+				<Sun className="opacity-50" />
+			</button>
 		);
 	}
 

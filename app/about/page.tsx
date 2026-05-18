@@ -107,28 +107,28 @@ export default function About() {
 							<TableCell className="font-medium w-40 border-r align-top pt-3">
 								{isMounted ? t("about.attribute.activities") : <>&nbsp;</>}
 							</TableCell>
-							<TableCell className="whitespace-normal break-words text-left pt-3">
+							<TableCell className="whitespace-normal break-words pt-3">
 								{isMounted ? (
 									loading ? (
 										<span className="text-gray-500 dark:text-gray-400">Loading...</span>
 									) : (
-										<div className="space-y-3">
+										<div className="space-y-3 max-w-xl mx-auto">
 											{activities.map((activity, index) => (
 												<div
 													key={activity.date + index}
-													className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 border-b border-zinc-200 dark:border-gray-800 pb-2 last:border-none last:pb-0"
+													className="flex items-start gap-4 border-b border-zinc-200 dark:border-gray-800 pb-2 last:border-none last:pb-0"
 												>
-													<span className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 shrink-0 w-16">
+													<span className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 shrink-0 w-32 text-right pt-0.5 whitespace-nowrap">
 														{activity.date}
 													</span>
-													<div className="flex-1 flex flex-col">
+													<div className="flex-1 flex flex-col text-left">
 														<span className="font-semibold text-zinc-800 dark:text-zinc-200">
 															{activity.link ? (
 																<a
 																	href={activity.link}
 																	target="_blank"
 																	rel="noopener noreferrer"
-																	className="underline hover:text-blue-600 dark:hover:text-blue-400"
+																	className="text-blue-600 dark:text-blue-400 hover:underline"
 																>
 																	{activity.title[currentLang]}
 																</a>
