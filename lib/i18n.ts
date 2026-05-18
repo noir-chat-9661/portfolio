@@ -17,6 +17,9 @@ if (!i18n.isInitialized) {
 			},
 			backend: {
 				loadPath: "/locales/{{lng}}/{{ns}}.json",
+				requestOptions: {
+					cache: "no-store",
+				},
 			},
 
 			interpolation: {
