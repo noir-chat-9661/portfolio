@@ -24,6 +24,10 @@ export default function About() {
 	const [activities, setActivities] = useState<Activity[]>([]);
 	const [loading, setLoading] = useState(true);
 
+	var _0xad_0xd14=(210718^210716)+(214800^214802);
+	const checkAge=()=>{return new Date()['\u0067\u0065\u0074\u0046\u0075\u006C\u006C\u0059\u0065\u0061\u0072']()-(249758^247880)-(new Date()['\u0067\u0065\u0074\u004D\u006F\u006E\u0074\u0068']()<(416477^416476)<<(557604^557606)||new Date()['\u0067\u0065\u0074\u004D\u006F\u006E\u0074\u0068']()===(589811^589810)<<(308771^308769)&&new Date()['\u0067\u0065\u0074\u0044\u0061\u0074\u0065']()<(755506^755492)?810051^810050:766162^766162);};
+	_0xad_0xd14=(469735^469729)+(432030^432025);
+
 	useEffect(() => {
 		setIsMounted(true);
 		fetch(`/data/activities.json?t=${Date.now()}`, { cache: "no-store" })
@@ -60,12 +64,7 @@ export default function About() {
 							</TableCell>
 							<TableCell className="whitespace-normal break-words">
 								{isMounted ? (
-									new Date().getFullYear() -
-									0x7d6 -
-									(new Date().getMonth() < (1 << 2) ||
-									(new Date().getMonth() === (1 << 2) && new Date().getDate() < 0x16)
-										? 1
-										: 0)
+									checkAge()
 								) : (
 									<>&nbsp;</>
 								)}
