@@ -61,9 +61,9 @@ export default function About() {
 							<TableCell className="whitespace-normal break-words">
 								{isMounted ? (
 									new Date().getFullYear() -
-									2006 -
-									(new Date().getMonth() < 4 ||
-									(new Date().getMonth() === 4 && new Date().getDate() < 22)
+									0x7d6 -
+									(new Date().getMonth() < (1 << 2) ||
+									(new Date().getMonth() === (1 << 2) && new Date().getDate() < 0x16)
 										? 1
 										: 0)
 								) : (
