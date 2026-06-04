@@ -35,6 +35,7 @@ export function Header() {
 						width={36}
 						height={36}
 						className="rounded-full w-10 h-10 mr-3 pointer-events-none select-none"
+						priority={true}
 					/>
 				</NextLink>
 				<div className={cn("text-xl font-bold", isProductsPage ? "sm:block hidden" : "lg:block hidden")}>
