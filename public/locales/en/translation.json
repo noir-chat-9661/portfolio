@@ -37,14 +37,16 @@
 			"occupation": "Occupation",
 			"technologies": "Technologies",
 			"specialities": "Specialities",
-			"activities": "Activities"
+			"activities": "Activities",
+			"hobby": "Hobby"
 		},
 		"value": {
 			"name": "Noir C(h)at",
 			"location": "Fukushima, Japan",
 			"occupation": "Student",
-			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, C, etc.",
-			"specialities": "Backend Development, Discord Bot Development"
+			"technologies": "Web technologies(React, Next.js)\nServer technologies(Hono, Express)\nApplication technologies(electron, discord.js)",
+			"specialities": "Backend Dev & Discord Bot Dev",
+			"hobby": "CTF, Programming"
 		}
 	},
 	"products": {

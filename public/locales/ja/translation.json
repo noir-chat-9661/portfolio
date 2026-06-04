@@ -37,14 +37,16 @@
 			"occupation": "職業",
 			"technologies": "使用技術",
 			"specialities": "得意分野",
-			"activities": "活動実績"
+			"activities": "活動実績",
+			"hobby": "趣味"
 		},
 		"value": {
 			"name": "凶兆の黒猫",
 			"location": "福島県",
 			"occupation": "学生",
-			"technologies": "JavaScript/TypeScript(React, Next.js, electron, Hono, Express, discord.js), Tailwind CSS, Cなど",
-			"specialities": "バックエンド開発・Discord Bot開発"
+			"technologies": "Web技術(React, Next.js)\nサーバー技術(Hono, Express)\nアプリケーション技術(electron, discord.js)",
+			"specialities": "バックエンド開発/Discord Bot開発",
+			"hobby": "CTF、プログラミング"
 		}
 	},
 	"products": {
