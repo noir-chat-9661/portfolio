@@ -80,11 +80,11 @@ export default function About() {
 								{isMounted ? t("about.value.occupation") : <>&nbsp;</>}
 							</TableCell>
 						</TableRow>
-						<TableRow className="border-none hover:bg-foreground/5 flex flex-col md:table-row py-2 md:py-0">
-							<TableCell className="font-medium w-full md:w-40 md:border-r pb-1 md:pb-0 block md:table-cell text-left md:text-right pr-4 shrink-0">
+						<TableRow className="border-none hover:bg-foreground/5">
+							<TableCell className="font-medium w-40 border-r">
 								{isMounted ? t("about.attribute.technologies") : <>&nbsp;</>}
 							</TableCell>
-							<TableCell className="whitespace-normal break-words w-full pt-1 md:pt-0 block md:table-cell pl-0 md:pl-2 text-left">
+							<TableCell className="whitespace-normal break-words">
 								{isMounted ? t("about.value.technologies") : <>&nbsp;</>}
 							</TableCell>
 						</TableRow>
