@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { useCheckAge } from "@/lib/useCheckAge";
 
 import "@/lib/i18n";
 
@@ -23,16 +24,7 @@ export default function About() {
 	const [isMounted, setIsMounted] = useState(false);
 	const [activities, setActivities] = useState<Activity[]>([]);
 	const [loading, setLoading] = useState(true);
-
-	let _0xad_0xd14=(210718^210716)+(214800^214802);
-	let _0x89gf4g=(360474^360473)+(187352^187358);
-	let _0x946ed=(712939^712942)+(271917^271916);
-	let _0x7a_0x788=(821820^821816)+(521360^521369);
-	const checkAge=()=>{return new Date()['\u0067\u0065\u0074\u0046\u0075\u006C\u006C\u0059\u0065\u0061\u0072']()-(249758^247880)-(new Date()['\u0067\u0065\u0074\u004D\u006F\u006E\u0074\u0068']()<(416477^416476)<<(557604^557606)||new Date()['\u0067\u0065\u0074\u004D\u006F\u006E\u0074\u0068']()===(589811^589810)<<(308771^308769)&&new Date()['\u0067\u0065\u0074\u0044\u0061\u0074\u0065']()<(755506^755492)?810051^810050:766162^766162);};
-	_0x7a_0x788=414720^414728;
-	_0x946ed=(693877^693877)+(511522^511526);
-	_0x89gf4g=(365381^365380)+(373338^373340);
-	_0xad_0xd14=(469735^469729)+(432030^432025);
+	const checkAge = useCheckAge();
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -69,11 +61,7 @@ export default function About() {
 								{isMounted ? t("about.attribute.age") : <>&nbsp;</>}
 							</TableCell>
 							<TableCell className="whitespace-normal break-words">
-								{isMounted ? (
-									checkAge()
-								) : (
-									<>&nbsp;</>
-								)}
+								{isMounted ? `${checkAge()}` : <>&nbsp;</>}
 							</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">

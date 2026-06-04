@@ -7,7 +7,8 @@
 			"lib/**/*.{js,ts,jsx,tsx,css}",
 			"public/**/*.{js,ts,jsx,tsx,css}",
 			"!**/dist",
-			"!**/out"
+			"!**/out",
+			"!lib/useCheckAge.ts"
 		]
 	},
 	"formatter": {
