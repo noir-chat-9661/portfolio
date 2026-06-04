@@ -84,7 +84,7 @@ export default function About() {
 							<TableCell className="font-medium w-40 border-r">
 								{isMounted ? t("about.attribute.technologies") : <>&nbsp;</>}
 							</TableCell>
-							<TableCell className="whitespace-normal break-words">
+							<TableCell className="whitespace-pre-line break-words">
 								{isMounted ? t("about.value.technologies") : <>&nbsp;</>}
 							</TableCell>
 						</TableRow>
@@ -96,11 +96,11 @@ export default function About() {
 								{isMounted ? t("about.value.specialities") : <>&nbsp;</>}
 							</TableCell>
 						</TableRow>
-						<TableRow className="border-none hover:bg-foreground/5 flex flex-col md:table-row py-2 md:py-0">
-							<TableCell className="font-medium w-full md:w-40 md:border-r pb-1 md:pb-0 block md:table-cell align-top pt-3 text-left md:text-right pr-4 shrink-0">
+						<TableRow className="border-none hover:bg-foreground/5">
+							<TableCell className="font-medium w-40 border-r align-top pt-3">
 								{isMounted ? t("about.attribute.activities") : <>&nbsp;</>}
 							</TableCell>
-							<TableCell className="whitespace-normal break-words w-full pt-1 md:pt-3 block md:table-cell pl-0 md:pl-2">
+							<TableCell className="whitespace-normal break-words pt-3">
 								{isMounted ? (
 									loading ? (
 										<span className="text-gray-500 dark:text-gray-400">Loading...</span>
@@ -111,10 +111,10 @@ export default function About() {
 													key={activity.date + index}
 													className="flex flex-col sm:flex-row items-start gap-1 sm:gap-4 border-b border-zinc-200 dark:border-gray-800 pb-3 last:border-none last:pb-0"
 												>
-													<span className="text-xs sm:text-sm font-semibold text-zinc-500 dark:text-zinc-400 sm:shrink-0 sm:w-28 text-left sm:text-right pt-0.5 whitespace-nowrap">
+													<span className="text-xs sm:text-sm font-semibold text-zinc-500 dark:text-zinc-400 sm:shrink-0 sm:w-28 text-left sm:text-right pt-0.5 whitespace-nowrap pl-2 sm:pl-0">
 														{activity.date}
 													</span>
-													<div className="flex-1 flex flex-col text-left w-full">
+													<div className="flex-1 flex flex-col text-left w-full pl-4 sm:pl-0">
 														<span className="font-semibold text-zinc-800 dark:text-zinc-200">
 															{activity.link ? (
 																<a
