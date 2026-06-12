@@ -59,28 +59,16 @@ export default function About() {
 				<Table className="max-w-[calc(100vw-var(--spacing)*20)] mx-auto text-md">
 					<TableBody>
 						<TableRow className="border-none hover:bg-foreground/5">
-							<TableCell className="font-medium w-40 border-r">
-								{t("about.attribute.name")}
-							</TableCell>
-							<TableCell className="whitespace-normal break-words">
-								{t("about.value.name")}
-							</TableCell>
+							<TableCell className="font-medium w-40 border-r">{t("about.attribute.name")}</TableCell>
+							<TableCell className="whitespace-normal break-words">{t("about.value.name")}</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
-							<TableCell className="font-medium w-40 border-r">
-								{t("about.attribute.age")}
-							</TableCell>
-							<TableCell className="whitespace-normal break-words">
-								{`${checkAge()}`}
-							</TableCell>
+							<TableCell className="font-medium w-40 border-r">{t("about.attribute.age")}</TableCell>
+							<TableCell className="whitespace-normal break-words">{`${checkAge()}`}</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
-							<TableCell className="font-medium w-40 border-r">
-								{t("about.attribute.location")}
-							</TableCell>
-							<TableCell className="whitespace-normal break-words">
-								{t("about.value.location")}
-							</TableCell>
+							<TableCell className="font-medium w-40 border-r">{t("about.attribute.location")}</TableCell>
+							<TableCell className="whitespace-normal break-words">{t("about.value.location")}</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
 							<TableCell className="font-medium w-40 border-r">
@@ -91,12 +79,8 @@ export default function About() {
 							</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
-							<TableCell className="font-medium w-40 border-r">
-								{t("about.attribute.hobby")}
-							</TableCell>
-							<TableCell className="whitespace-normal break-words">
-								{t("about.value.hobby")}
-							</TableCell>
+							<TableCell className="font-medium w-40 border-r">{t("about.attribute.hobby")}</TableCell>
+							<TableCell className="whitespace-normal break-words">{t("about.value.hobby")}</TableCell>
 						</TableRow>
 						<TableRow className="border-none hover:bg-foreground/5">
 							<TableCell className="font-medium w-40 border-r">

@@ -1,12 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Zen_Kurenaido } from "next/font/google";
+import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/header";
 
-const geistZenKurenaido = Zen_Kurenaido({
-	subsets: ["latin"],
-	weight: ["400"],
+const zenKurenaido = localFont({
+	src: "../public/fonts/ZenKurenaido.ttf",
 	variable: "--font-zen-kurenaido",
 });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ja" suppressHydrationWarning={true}>
-			<body className={`${geistZenKurenaido.variable} antialiased`}>
+			<body className={`${zenKurenaido.variable} antialiased`}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
 					<div className="fixed inset-0 flex flex-col">
 						<Header />
