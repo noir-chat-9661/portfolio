@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const isStaticExport = process.env.GITHUB_PAGES === 'true' || process.env.CF_PAGES === '1';
 
 const nextConfig: NextConfig = {
-	...(isGitHubPages && {
+	...(isStaticExport && {
 		output: "export",
 		trailingSlash: true,
 	}),
@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
 	compiler: {
 		styledComponents: true,
 	},
-	images: isGitHubPages ? {
+	images: isStaticExport ? {
 		unoptimized: true,
 	} : undefined,
 	allowedDevOrigins: [],
