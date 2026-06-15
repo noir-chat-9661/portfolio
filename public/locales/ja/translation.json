@@ -3,7 +3,8 @@
 		"title": "ポートフォリオ",
 		"home": "ホーム",
 		"about": "自己紹介",
-		"link": "リンク集"
+		"link": "リンク集",
+		"contact": "問い合わせ"
 	},
 	"theme": {
 		"light": "ライト",
@@ -84,6 +85,21 @@
 			"failedToLoad": "TRPGダイスローラーのコードの読み込みに失敗しました。",
 			"calculationError": "計算エラー",
 			"inputPlaceholder": "ダイス表記を入力してください。"
+		}
+	},
+	"contact": {
+		"title": "お問い合わせ",
+		"name": "お名前",
+		"email": "メールアドレス",
+		"message": "メッセージ",
+		"send": "送信する",
+		"sending": "送信中...",
+		"success": "お問い合わせを送信しました。",
+		"error": "送信に失敗しました。時間をおいて再度お試しください。",
+		"placeholder": {
+			"name": "山田 太郎",
+			"email": "your-email@example.com",
+			"message": "メッセージを入力してください..."
 		}
 	}
 }

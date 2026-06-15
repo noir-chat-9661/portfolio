@@ -1,0 +1,11 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mypage",
+	"pages_build_output_dir": "./out",
+	"services": [
+		{
+			"binding": "CONTACT_SERVICE",
+			"service": "mail-forward"
+		}
+	]
+}

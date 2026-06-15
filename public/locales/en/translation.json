@@ -3,7 +3,8 @@
 		"title": "Portfolio",
 		"home": "Home",
 		"about": "About",
-		"link": "Links"
+		"link": "Links",
+		"contact": "Contact"
 	},
 	"theme": {
 		"light": "Light",
@@ -84,6 +85,21 @@
 			"failedToLoad": "Failed to load TRPG Dice Roller code.",
 			"calculationError": "Calculation Error",
 			"inputPlaceholder": "Enter a dice expression."
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"send": "Send Message",
+		"sending": "Sending...",
+		"success": "Your message has been sent successfully. Thank you!",
+		"error": "Failed to send the message. Please try again later.",
+		"placeholder": {
+			"name": "John Doe",
+			"email": "your-email@example.com",
+			"message": "Type your message here..."
 		}
 	}
 }
