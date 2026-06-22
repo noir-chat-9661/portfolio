@@ -13,7 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://noirch.at";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteUrl),
-	title: "Cat Tower",
+	title: "きゃっとたわー / Cat Tower",
 	description:
 		"凶兆の黒猫のポートフォリオです。プロフィールや各種SNSリンクの置き場。また、連絡用のフォームも置いています。",
 	alternates: {
