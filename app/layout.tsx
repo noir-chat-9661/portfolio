@@ -13,7 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://noirch.at";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteUrl),
-	title: "NoirChat - Web Developer & Designer Portfolio",
+	title: "My Page",
 	description:
 		"Web開発者兼デザイナーのNoirChatのポートフォリオサイトです。制作実績やプロフィール、各種SNSリンク、コンタクトフォームを掲載しています。",
 	alternates: {
