@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	description: "Web開発者兼デザイナーのNoirChatがこれまでに制作したWebアプリケーションや開発ツールの一覧ページです。",
+	description: "凶兆の黒猫がこれまでに制作したWebアプリケーションや開発ツールの一覧ページです。",
 	alternates: {
 		canonical: "/products",
 	},

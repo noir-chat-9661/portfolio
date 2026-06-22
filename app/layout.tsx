@@ -13,9 +13,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://noirch.at";
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteUrl),
-	title: "My Page",
+	title: "Cat Tower",
 	description:
-		"Web開発者兼デザイナーのNoirChatのポートフォリオサイトです。制作実績やプロフィール、各種SNSリンク、コンタクトフォームを掲載しています。",
+		"凶兆の黒猫のポートフォリオです。プロフィールや各種SNSリンクの置き場。また、連絡用のフォームも置いています。",
 	alternates: {
 		canonical: "/",
 	},
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
-	name: "NoirChat",
+	name: "Cat Tower",
 	url: siteUrl,
-	description: "Web開発者兼デザイナーのNoirChatのポートフォリオサイトです。",
+	description: "凶兆の黒猫のポートフォリオです。",
 	author: {
 		"@type": "Person",
-		name: "NoirChat",
+		name: "Cat Tower",
 		url: siteUrl,
 	},
 };

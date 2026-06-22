@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	description:
-		"TRPGなどのゲームプレイで利用できる多機能なオンラインダイス（サイコロ）ツールです。NoirChatが開発したWebアプリケーションとして動作します。",
+		"TRPGなどのゲームプレイで利用できる多機能なダイスツールです。メインはnpmのパッケージですが、ここではそれをインポートしているためWebアプリケーションとして動作します。",
 	alternates: {
 		canonical: "/products/trpg-dice-roller",
 	},

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	description:
-		"Web開発者兼デザイナーのNoirChatのプロフィールと活動実績を紹介するページです。これまでの経歴やスキルについて掲載しています。",
+		"凶兆の黒猫のプロフィールと活動実績を紹介するページです。これまでの実績や技術の情報について掲載しています。",
 	alternates: {
 		canonical: "/about",
 	},

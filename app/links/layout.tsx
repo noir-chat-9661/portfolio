@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	description:
-		"GitHub、Twitter(X)、DiscordなどのSNSアカウントや、関連サイトへのリンクをまとめたページです。お気軽にフォローやコンタクトをどうぞ。",
+		"GitHub、Twitter(X)、DiscordなどのSNSアカウントや、関連サイトへのリンクをまとめたページです。気軽にフォローしてください！",
 	alternates: {
 		canonical: "/links",
 	},
