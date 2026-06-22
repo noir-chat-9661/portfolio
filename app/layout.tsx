@@ -9,9 +9,29 @@ const zenKurenaido = localFont({
 	variable: "--font-zen-kurenaido",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://noirch.at";
+
 export const metadata: Metadata = {
-	title: "My Page",
-	description: "This is my personal page.",
+	metadataBase: new URL(siteUrl),
+	title: "NoirChat - Web Developer & Designer Portfolio",
+	description:
+		"Web開発者兼デザイナーのNoirChatのポートフォリオサイトです。制作実績やプロフィール、各種SNSリンク、コンタクトフォームを掲載しています。",
+	alternates: {
+		canonical: "/",
+	},
+};
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: "NoirChat",
+	url: siteUrl,
+	description: "Web開発者兼デザイナーのNoirChatのポートフォリオサイトです。",
+	author: {
+		"@type": "Person",
+		name: "NoirChat",
+		url: siteUrl,
+	},
 };
 
 export default function RootLayout({
@@ -21,6 +41,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ja" suppressHydrationWarning={true}>
+			<head>
+				{/* biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD schema markup */}
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+			</head>
 			<body className={`${zenKurenaido.variable} antialiased`}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
 					<div className="fixed inset-0 flex flex-col">
